@@ -1,0 +1,192 @@
+section {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  overflow-x: hidden;
+}
+
+.intro.active {
+  opacity: 0;
+  z-index: -1;
+}
+.intro {
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5%;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  transition: opacity 0.3s, z-index 0.3s;
+}
+.intro h1 {
+  display: inline-block;
+  font-size: 5vmax;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px 5px;
+  text-align: center;
+}
+.intro h1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+}
+.intro h1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+}
+.intro h1 span {
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  font-size: 3vmax;
+  transform: translate(73%, 0%);
+}
+.intro .view {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 23px;
+  font-size: 1rem;
+  position: relative;
+  border: 1px solid #fff;
+  transition: 0.3s;
+}
+.intro .view:hover {
+  background: #fff;
+  color: #111;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(100%);
+}
+.slide.active {
+  transform: translateX(0%);
+}
+.slide::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  z-index: -1;
+}
+.slide_1 {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.75) 25%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.25) 75%,
+    rgba(0, 0, 0, 0.15) 100%
+  ), url(../img/bespoke.jpg) no-repeat center;
+}
+.slide_2 {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.75) 25%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.25) 75%,
+    rgba(0, 0, 0, 0.15) 100%
+  ), url(../img/shilla_hotel.jpg) no-repeat center;
+}
+.slide_3 {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.75) 25%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.25) 75%,
+    rgba(0, 0, 0, 0.15) 100%
+  ), url(../img/form-validator.png) no-repeat center;
+}
+.slide_4 {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.75) 25%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.25) 75%,
+    rgba(0, 0, 0, 0.15) 100%
+  ), url(../img/movie-seat-booking.png) no-repeat center;
+}
+.slide .txt_wrap {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  transform: translate(-50%,-50%);
+}
+.slide h2 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.slide p {
+  margin: 10px 0 15px 0;
+  line-height: 1.35;
+  font-size: 18px;
+  font-weight: 100;
+}
+.slide .more {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid #fff;
+}
+.slide .more i.fa-arrow-right {
+  padding: 0 5px 0 15px;
+}
+
+.btn {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  color: black;
+  display: flex;
+  font-size: 35px;
+}
+.btn div {
+  width: 65px;
+  cursor: pointer;
+  padding: 15px;
+  background: rgba(255,255,255, 0.35);
+  text-align: center;
+  transition: background 0.3s;
+}
+.btn div:hover {
+  background: rgba(255,255,255, 0.9);
+}
